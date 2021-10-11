@@ -14,7 +14,10 @@ if (isset($_SESSION['sesi'])) {
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Dashboard - SB Admin</title>
+        <script language='JavaScript'>document.write(tanggallengkap);</script>
+
+
+        <title>Perpus</title><
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
@@ -22,6 +25,7 @@ if (isset($_SESSION['sesi'])) {
     <body class="sb-nav-fixed">
         <?php require ('navbar.php');?>
         <div id="layoutSidenav">
+        <script language='JavaScript'>document.write(tanggallengkap);</script>
 
 
                 <?php require ('sidebare.php');?>
@@ -36,6 +40,19 @@ if (isset($_SESSION['sesi'])) {
         <script src="assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
         <script src="js/datatables-simple-demo.js"></script>
+        <script language="JavaScript">
+        var tanggallengkap = new String();
+        var namahari = ("Minggu Senin Selasa Rabu Kamis Jumat Sabtu");
+        namahari = namahari.split(" ");
+        var namabulan = ("Januari Februari Maret April Mei Juni Juli Agustus September Oktober November Desember");
+        namabulan = namabulan.split(" ");
+        var tgl = new Date();
+        var hari = tgl.getDay();
+        var tanggal = tgl.getDate();
+        var bulan = tgl.getMonth();
+        var tahun = tgl.getFullYear();
+        tanggallengkap = namahari[hari] + ", " +tanggal + " " + namabulan[bulan] + " " + tahun;
+    </script>
     </body>
 </html>
 
@@ -49,6 +66,8 @@ else{
             header('location:login.php'); 
 }
 ?>        
+
+
  <!--
                     $pages_dir = 'pages';
                     if(!empty($_GET['p'])){
@@ -65,3 +84,5 @@ else{
                          include($pages_dir.'/home.php');
                     
                 ?> -->
+   
+

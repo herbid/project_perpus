@@ -76,7 +76,7 @@ $query = "SELECT * FROM tbanggota WHERE id_anggota='$id_anggota'";
                                 <div class="form-group col-md-6">
                                 <label for="id_anggota">ID Anggota </label>
                                 <input type="hidden" name="id_anggota" id="id_anggota" value="<?=$id_anggota?>">
-                                 <input type="text" class="form-control" id="kd_anggota" value="<?=$kd_anggota?>" name="kd_anggota" placeholder="Masukan Kode Anggota " required readonly>
+                                <input type="text" class="form-control" id="kd_anggota" value="<?=$kd_anggota?>" name="kd_anggota" placeholder="Masukan Kode Anggota " required readonly>
                               </div>
                                 <div class="form-group col-md-6">
                                 <label for="umur">Nama</label>
